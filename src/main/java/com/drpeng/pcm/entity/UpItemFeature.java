@@ -30,24 +30,27 @@ public class UpItemFeature extends BaseEntity {
         return featureRelatId;
     }
 
-    private void setFeatureRelatId(String featureRelatId) {
+    private UpItemFeature setFeatureRelatId(String featureRelatId) {
         this.featureRelatId = featureRelatId;
+        return this;
     }
 
     public String getProductItemId() {
         return productItemId;
     }
 
-    public void setProductItemId(String productItemId) {
+    public UpItemFeature setProductItemId(String productItemId) {
         this.productItemId = productItemId;
+        return this;
     }
 
     public String getFeatureId() {
         return featureId;
     }
 
-    public void setFeatureId(String featureId) {
+    public UpItemFeature setFeatureId(String featureId) {
         this.featureId = featureId;
+        return this;
     }
 
     public String getFeatureValue() {
@@ -57,8 +60,9 @@ public class UpItemFeature extends BaseEntity {
         return "'" + featureValue + "'";
     }
 
-    public void setFeatureValue(String featureValue) {
+    public UpItemFeature setFeatureValue(String featureValue) {
         this.featureValue = featureValue;
+        return this;
     }
 
     public String getFeatureText() {
@@ -68,48 +72,54 @@ public class UpItemFeature extends BaseEntity {
         return "'" + featureText + "'";
     }
 
-    public void setFeatureText(String featureText) {
+    public UpItemFeature setFeatureText(String featureText) {
         this.featureText = featureText;
+        return this;
     }
 
     public String getSortBy() {
         return sortBy;
     }
 
-    public void setSortBy(String sortBy) {
+    public UpItemFeature setSortBy(String sortBy) {
         this.sortBy = sortBy;
+        return this;
     }
 
     public String getCreater() {
         return creater;
     }
 
-    public void setCreater(String creater) {
+    public UpItemFeature setCreater(String creater) {
         this.creater = creater;
+        return this;
     }
 
     public String getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(String createDate) {
+    public UpItemFeature setCreateDate(String createDate) {
         this.createDate = createDate;
+        return this;
     }
 
     public String getModifier() {
         return modifier;
     }
 
-    public void setModifier(String modifier) {
+    public UpItemFeature setModifier(String modifier) {
         this.modifier = modifier;
+        return this;
     }
 
     public String getModifyDate() {
         return modifyDate;
     }
 
-    public void setModifyDate(String modifyDate) {
+    public UpItemFeature setModifyDate(String modifyDate) {
         this.modifyDate = modifyDate;
+        return this;
     }
 
     public String getDelFlag() {
@@ -119,8 +129,9 @@ public class UpItemFeature extends BaseEntity {
         return "'" + delFlag + "'";
     }
 
-    public void setDelFlag(String delFlag) {
+    public UpItemFeature setDelFlag(String delFlag) {
         this.delFlag = delFlag;
+        return this;
     }
 
     public String toInsertSql() {

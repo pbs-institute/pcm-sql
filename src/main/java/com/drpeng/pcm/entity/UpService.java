@@ -14,17 +14,145 @@ public class UpService extends UpProductItem {
     private String recordTableName = "null";
     private String displayType = "null";
     private String allowMulti = "null";
-    private String creater = "10458";
-    private String createDate = "sysdate";
-    private String modifier = "null";
-    private String modifyDate = "null";
-    private String delFlag = "1";
     private String hasAccountFee = "null";
     private String accountFeeType = "null";
 
+    // ---- Methods of UpProductItem Begin ----
+    public UpService setExtendId(String extendId) {
+        this.extendId = extendId;
+        return this;
+    }
+
+    public UpService setCode(String code) {
+        this.code = code;
+        return this;
+    }
+
+    public UpService setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public UpService setAlphaName(String alphaName) {
+        this.alphaName = alphaName;
+        return this;
+    }
+
+    public UpService setItemType(String itemType) {
+        this.itemType = itemType;
+        return this;
+    }
+
+    public UpService setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+
+    public UpService setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+
+    public UpService setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+
+    public UpService setCreater(String creater) {
+        this.creater = creater;
+        return this;
+    }
+
+    public UpService setModifier(String modifier) {
+        this.modifier = modifier;
+        return this;
+    }
+
+    public UpService setState(String state) {
+        this.state = state;
+        return this;
+    }
+
+    public UpService setDelFlag(String delFlag) {
+        this.delFlag = delFlag;
+        return this;
+    }
+
+    public UpService setRemarks(String remarks) {
+        this.remarks = remarks;
+        return this;
+    }
+
+    public UpService setCreateDate(String createDate) {
+        this.createDate = createDate;
+        return this;
+    }
+
+    public UpService setModifyDate(String modifyDate) {
+        this.modifyDate = modifyDate;
+        return this;
+    }
+
+    public UpService setEffDate(String effDate) {
+        this.effDate = effDate;
+        return this;
+    }
+
+    public UpService setExpDate(String expDate) {
+        this.expDate = expDate;
+        return this;
+    }
+
+    public UpService setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+
+    public UpService setChecker(String checker) {
+        this.checker = checker;
+        return this;
+    }
+
+    public UpService setIslock(String islock) {
+        this.islock = islock;
+        return this;
+    }
+
+    public UpService setSupplierId(String supplierId) {
+        this.supplierId = supplierId;
+        return this;
+    }
+
+    public UpService setProviderType(String providerType) {
+        this.providerType = providerType;
+        return this;
+    }
+
+    public UpService setBusinessDomainId(String businessDomainId) {
+        this.businessDomainId = businessDomainId;
+        return this;
+    }
+
+    public UpService setOperRegion(String operRegion) {
+        this.operRegion = operRegion;
+        return this;
+    }
+
+    public UpService setShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
+
+    public UpService addFeature(UpItemFeature relatFeature) {
+        relatFeature.setProductItemId(productItemId);
+        relatFeatures.add(relatFeature);
+        return this;
+    }
+    // ---- Methods of UpProductItem End ----
+
     public UpService() {
         super(UpProductItem.ITEM_TYPE_SERVICE);
-        this.serviceId = super._getProductItemId();
+        this.serviceId = super.getProductItemId();
     }
 
     public UpService(String serviceId) {
@@ -36,48 +164,54 @@ public class UpService extends UpProductItem {
         return serviceId;
     }
 
-    private void setServiceId(String serviceId) {
+    private UpService setServiceId(String serviceId) {
         this.serviceId = serviceId;
+        return this;
     }
 
     public String getServiceType() {
         return serviceType;
     }
 
-    public void setServiceType(String serviceType) {
+    public UpService setServiceType(String serviceType) {
         this.serviceType = serviceType;
+        return this;
     }
 
     public String getServiceLevel() {
         return serviceLevel;
     }
 
-    public void setServiceLevel(String serviceLevel) {
+    public UpService setServiceLevel(String serviceLevel) {
         this.serviceLevel = serviceLevel;
+        return this;
     }
 
     public String getNeedRegister() {
         return needRegister;
     }
 
-    public void setNeedRegister(String needRegister) {
+    public UpService setNeedRegister(String needRegister) {
         this.needRegister = needRegister;
+        return this;
     }
 
     public String getPsType() {
         return psType;
     }
 
-    public void setPsType(String psType) {
+    public UpService setPsType(String psType) {
         this.psType = psType;
+        return this;
     }
 
     public String getPsServiceType() {
         return psServiceType;
     }
 
-    public void setPsServiceType(String psServiceType) {
+    public UpService setPsServiceType(String psServiceType) {
         this.psServiceType = psServiceType;
+        return this;
     }
 
     public String getBaseFlag() {
@@ -87,8 +221,9 @@ public class UpService extends UpProductItem {
         return "'" + baseFlag + "'";
     }
 
-    public void setBaseFlag(String baseFlag) {
+    public UpService setBaseFlag(String baseFlag) {
         this.baseFlag = baseFlag;
+        return this;
     }
 
     public String getRecordTableName() {
@@ -98,8 +233,9 @@ public class UpService extends UpProductItem {
         return "'" + recordTableName + "'";
     }
 
-    public void setRecordTableName(String recordTableName) {
+    public UpService setRecordTableName(String recordTableName) {
         this.recordTableName = recordTableName;
+        return this;
     }
 
     public String getDisplayType() {
@@ -109,75 +245,36 @@ public class UpService extends UpProductItem {
         return "'" + displayType + "'";
     }
 
-    public void setDisplayType(String displayType) {
+    public UpService setDisplayType(String displayType) {
         this.displayType = displayType;
+        return this;
     }
 
     public String getAllowMulti() {
         return allowMulti;
     }
 
-    public void setAllowMulti(String allowMulti) {
+    public UpService setAllowMulti(String allowMulti) {
         this.allowMulti = allowMulti;
-    }
-
-    public String getCreater() {
-        return creater;
-    }
-
-    public void setCreater(String creater) {
-        this.creater = creater;
-    }
-
-    public String getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(String createDate) {
-        this.createDate = createDate;
-    }
-
-    public String getModifier() {
-        return modifier;
-    }
-
-    public void setModifier(String modifier) {
-        this.modifier = modifier;
-    }
-
-    public String getModifyDate() {
-        return modifyDate;
-    }
-
-    public void setModifyDate(String modifyDate) {
-        this.modifyDate = modifyDate;
-    }
-
-    public String getDelFlag() {
-        if (delFlag.equals("null")) {
-            return delFlag;
-        }
-        return "'" + delFlag + "'";
-    }
-
-    public void setDelFlag(String delFlag) {
-        this.delFlag = delFlag;
+        return this;
     }
 
     public String getHasAccountFee() {
         return hasAccountFee;
     }
 
-    public void setHasAccountFee(String hasAccountFee) {
+    public UpService setHasAccountFee(String hasAccountFee) {
         this.hasAccountFee = hasAccountFee;
+        return this;
     }
 
     public String getAccountFeeType() {
         return accountFeeType;
     }
 
-    public void setAccountFeeType(String accountFeeType) {
+    public UpService setAccountFeeType(String accountFeeType) {
         this.accountFeeType = accountFeeType;
+        return this;
     }
 
     public String toInsertSql() {

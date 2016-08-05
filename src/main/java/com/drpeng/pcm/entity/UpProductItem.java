@@ -15,168 +15,168 @@ public class UpProductItem extends BaseEntity {
     public static final String ITEM_TYPE_BUSINESS_OPERATION = "BUSINESS_OPERATION";
     public static final String ITEM_TYPE_SPEC_ROLE = "SPEC_ROLE";
 
-    private String productItemId = "null";
-    private String extendId = "0";
-    private String code = "null";
-    private String name = "null";
-    private String alphaName = "null";
-    private String itemType = "null";
-    private String priority = "null";
-    private String sortBy = "null";
-    private String description = "null";
-    private String creater = "10458";
-    private String modifier = "null";
-    private String state = "U";
-    private String delFlag = "1";
-    private String remarks = "null";
-    private String createDate = "sysdate";
-    private String modifyDate = "null";
-    private String effDate = "sysdate";
-    private String expDate = "to_date('20991231235959', 'yyyymmddhh24miss')";
-    private String entityId = "null";
-    private String checker = "null";
-    private String islock = "null";
-    private String supplierId = "null";
-    private String providerType = "null";
-    private String businessDomainId = "null";
-    private String operRegion = "null";
-    private String shortName = "null";
+    protected String productItemId = "null";
+    protected String extendId = "0";
+    protected String code = "null";
+    protected String name = "null";
+    protected String alphaName = "null";
+    protected String itemType = "null";
+    protected String priority = "null";
+    protected String sortBy = "null";
+    protected String description = "null";
+    protected String creater = "10458";
+    protected String modifier = "null";
+    protected String state = "U";
+    protected String delFlag = "1";
+    protected String remarks = "null";
+    protected String createDate = "sysdate";
+    protected String modifyDate = "null";
+    protected String effDate = "sysdate";
+    protected String expDate = "to_date('20991231235959', 'yyyymmddhh24miss')";
+    protected String entityId = "null";
+    protected String checker = "null";
+    protected String islock = "null";
+    protected String supplierId = "null";
+    protected String providerType = "null";
+    protected String businessDomainId = "null";
+    protected String operRegion = "null";
+    protected String shortName = "null";
 
     private boolean isNew = true;
 
-    private List<UpItemFeature> relatFeatures = new ArrayList<UpItemFeature>();
+    protected List<UpItemFeature> relatFeatures = new ArrayList<UpItemFeature>();
 
-    public String _getProductItemId() {
+    public String getProductItemId() {
         return productItemId;
     }
 
-    public String _getExtendId() {
+    public String getExtendId() {
         return extendId;
     }
 
-    public String _getCode() {
+    public String getCode() {
         if (code.equals("null")) {
             return code;
         }
         return "'" + code + "'";
     }
 
-    public String _getName() {
+    public String getName() {
         if (name.equals("null")) {
             return name;
         }
         return "'" + name + "'";
     }
 
-    public String _getAlphaName() {
+    public String getAlphaName() {
         if (alphaName.equals("null")) {
             return alphaName;
         }
         return "'" + alphaName + "'";
     }
 
-    public String _getItemType() {
+    public String getItemType() {
         if (itemType.equals("null")) {
             return itemType;
         }
         return "'" + itemType + "'";
     }
 
-    public String _getPriority() {
+    public String getPriority() {
         return priority;
     }
 
-    public String _getSortBy() {
+    public String getSortBy() {
         return sortBy;
     }
 
-    public String _getDescription() {
+    public String getDescription() {
         if (description.equals("null")) {
             return description;
         }
         return "'" + description + "'";
     }
 
-    public String _getCreater() {
+    public String getCreater() {
         return creater;
     }
 
-    public String _getModifier() {
+    public String getModifier() {
         return modifier;
     }
 
-    public String _getState() {
+    public String getState() {
         if (state.equals("null")) {
             return state;
         }
         return "'" + state + "'";
     }
 
-    public String _getDelFlag() {
+    public String getDelFlag() {
         if (delFlag.equals("null")) {
             return delFlag;
         }
         return "'" + delFlag + "'";
     }
 
-    public String _getRemarks() {
+    public String getRemarks() {
         if (remarks.equals("null")) {
             return remarks;
         }
         return "'" + remarks + "'";
     }
 
-    public String _getCreateDate() {
+    public String getCreateDate() {
         return createDate;
     }
 
-    public String _getModifyDate() {
+    public String getModifyDate() {
         return modifyDate;
     }
 
-    public String _getEffDate() {
+    public String getEffDate() {
         return effDate;
     }
 
-    public String _getExpDate() {
+    public String getExpDate() {
         return expDate;
     }
 
-    public String _getEntityId() {
+    public String getEntityId() {
         return entityId;
     }
 
-    public String _getChecker() {
+    public String getChecker() {
         return checker;
     }
 
-    public String _getIslock() {
+    public String getIslock() {
         if (islock.equals("null")) {
             return islock;
         }
         return "'" + islock + "'";
     }
 
-    public String _getSupplierId() {
+    public String getSupplierId() {
         return supplierId;
     }
 
-    public String _getProviderType() {
+    public String getProviderType() {
         return providerType;
     }
 
-    public String _getBusinessDomainId() {
+    public String getBusinessDomainId() {
         return businessDomainId;
     }
 
-    public String _getOperRegion() {
+    public String getOperRegion() {
         if (operRegion.equals("null")) {
             return operRegion;
         }
         return "'" + operRegion + "'";
     }
 
-    public String _getShortName() {
+    public String getShortName() {
         if (shortName.equals("null")) {
             return shortName;
         }
@@ -187,113 +187,9 @@ public class UpProductItem extends BaseEntity {
         return isNew;
     }
 
-    private void _setProductItemId(String productItemId) {
+    private UpProductItem setProductItemId(String productItemId) {
         this.productItemId = productItemId;
-    }
-
-    public void _setExtendId(String extendId) {
-        this.extendId = extendId;
-    }
-
-    public void _setCode(String code) {
-        this.code = code;
-    }
-
-    public void _setName(String name) {
-        this.name = name;
-    }
-
-    public void _setAlphaName(String alphaName) {
-        this.alphaName = alphaName;
-    }
-
-    public void _setItemType(String itemType) {
-        this.itemType = itemType;
-    }
-
-    public void _setPriority(String priority) {
-        this.priority = priority;
-    }
-
-    public void _setSortBy(String sortBy) {
-        this.sortBy = sortBy;
-    }
-
-    public void _setDescription(String description) {
-        this.description = description;
-    }
-
-    public void _setCreater(String creater) {
-        this.creater = creater;
-    }
-
-    public void _setModifier(String modifier) {
-        this.modifier = modifier;
-    }
-
-    public void _setState(String state) {
-        this.state = state;
-    }
-
-    public void _setDelFlag(String delFlag) {
-        this.delFlag = delFlag;
-    }
-
-    public void _setRemarks(String remarks) {
-        this.remarks = remarks;
-    }
-
-    public void _setCreateDate(String createDate) {
-        this.createDate = createDate;
-    }
-
-    public void _setModifyDate(String modifyDate) {
-        this.modifyDate = modifyDate;
-    }
-
-    public void _setEffDate(String effDate) {
-        this.effDate = effDate;
-    }
-
-    public void _setExpDate(String expDate) {
-        this.expDate = expDate;
-    }
-
-    public void _setEntityId(String entityId) {
-        this.entityId = entityId;
-    }
-
-    public void _setChecker(String checker) {
-        this.checker = checker;
-    }
-
-    public void _setIslock(String islock) {
-        this.islock = islock;
-    }
-
-    public void _setSupplierId(String supplierId) {
-        this.supplierId = supplierId;
-    }
-
-    public void _setProviderType(String providerType) {
-        this.providerType = providerType;
-    }
-
-    public void _setBusinessDomainId(String businessDomainId) {
-        this.businessDomainId = businessDomainId;
-    }
-
-    public void _setOperRegion(String operRegion) {
-        this.operRegion = operRegion;
-    }
-
-    public void _setShortName(String shortName) {
-        this.shortName = shortName;
-    }
-
-    public void _addFeature(UpItemFeature relatFeature) {
-        relatFeature.setProductItemId(productItemId);
-        relatFeatures.add(relatFeature);
+        return this;
     }
 
     public UpProductItem(String itemType) {
@@ -357,32 +253,32 @@ public class UpProductItem extends BaseEntity {
                     "   oper_region,\n" +
                     "   short_name)\n" +
                     "values (\n")
-                    .append("   " + _getProductItemId() + ",\n")
-                    .append("   " + _getExtendId() + ",\n")
-                    .append("   " + _getCode() + ",\n")
-                    .append("   " + _getName() + ",\n")
-                    .append("   " + _getAlphaName() + ",\n")
-                    .append("   " + _getItemType() + ",\n")
-                    .append("   " + _getPriority() + ",\n")
-                    .append("   " + _getSortBy() + ",\n")
-                    .append("   " + _getDescription() + ",\n")
-                    .append("   " + _getCreater() + ",\n")
-                    .append("   " + _getModifier() + ",\n")
-                    .append("   " + _getState() + ",\n")
-                    .append("   " + _getDelFlag() + ",\n")
-                    .append("   " + _getRemarks() + ",\n")
-                    .append("   " + _getCreateDate() + ",\n")
-                    .append("   " + _getModifyDate() + ",\n")
-                    .append("   " + _getEffDate() + ",\n")
-                    .append("   " + _getExpDate() + ",\n")
-                    .append("   " + _getEntityId() + ",\n")
-                    .append("   " + _getChecker() + ",\n")
-                    .append("   " + _getIslock() + ",\n")
-                    .append("   " + _getSupplierId() + ",\n")
-                    .append("   " + _getProviderType() + ",\n")
-                    .append("   " + _getBusinessDomainId() + ",\n")
-                    .append("   " + _getOperRegion() + ",\n")
-                    .append("   " + _getShortName() + "\n")
+                    .append("   " + getProductItemId() + ",\n")
+                    .append("   " + getExtendId() + ",\n")
+                    .append("   " + getCode() + ",\n")
+                    .append("   " + getName() + ",\n")
+                    .append("   " + getAlphaName() + ",\n")
+                    .append("   " + getItemType() + ",\n")
+                    .append("   " + getPriority() + ",\n")
+                    .append("   " + getSortBy() + ",\n")
+                    .append("   " + getDescription() + ",\n")
+                    .append("   " + getCreater() + ",\n")
+                    .append("   " + getModifier() + ",\n")
+                    .append("   " + getState() + ",\n")
+                    .append("   " + getDelFlag() + ",\n")
+                    .append("   " + getRemarks() + ",\n")
+                    .append("   " + getCreateDate() + ",\n")
+                    .append("   " + getModifyDate() + ",\n")
+                    .append("   " + getEffDate() + ",\n")
+                    .append("   " + getExpDate() + ",\n")
+                    .append("   " + getEntityId() + ",\n")
+                    .append("   " + getChecker() + ",\n")
+                    .append("   " + getIslock() + ",\n")
+                    .append("   " + getSupplierId() + ",\n")
+                    .append("   " + getProviderType() + ",\n")
+                    .append("   " + getBusinessDomainId() + ",\n")
+                    .append("   " + getOperRegion() + ",\n")
+                    .append("   " + getShortName() + "\n")
                     .append(");\n\n")
             ;
         }

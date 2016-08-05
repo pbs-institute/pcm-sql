@@ -23,15 +23,143 @@ public class UpPricePlan extends UpProductItem {
     private String accCode = "null";
     private String paraFlag = "N";
     private String interfaceCode = "null";
-    private String creater = "10458";
-    private String createDate = "null";
-    private String modifier = "null";
-    private String modifyDate = "null";
-    private String delFlag = "1";
+
+    // ---- Methods of UpProductItem Begin ----
+    public UpPricePlan setExtendId(String extendId) {
+        this.extendId = extendId;
+        return this;
+    }
+
+    public UpPricePlan setCode(String code) {
+        this.code = code;
+        return this;
+    }
+
+    public UpPricePlan setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public UpPricePlan setAlphaName(String alphaName) {
+        this.alphaName = alphaName;
+        return this;
+    }
+
+    public UpPricePlan setItemType(String itemType) {
+        this.itemType = itemType;
+        return this;
+    }
+
+    public UpPricePlan setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+
+    public UpPricePlan setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+
+    public UpPricePlan setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+
+    public UpPricePlan setCreater(String creater) {
+        this.creater = creater;
+        return this;
+    }
+
+    public UpPricePlan setModifier(String modifier) {
+        this.modifier = modifier;
+        return this;
+    }
+
+    public UpPricePlan setState(String state) {
+        this.state = state;
+        return this;
+    }
+
+    public UpPricePlan setDelFlag(String delFlag) {
+        this.delFlag = delFlag;
+        return this;
+    }
+
+    public UpPricePlan setRemarks(String remarks) {
+        this.remarks = remarks;
+        return this;
+    }
+
+    public UpPricePlan setCreateDate(String createDate) {
+        this.createDate = createDate;
+        return this;
+    }
+
+    public UpPricePlan setModifyDate(String modifyDate) {
+        this.modifyDate = modifyDate;
+        return this;
+    }
+
+    public UpPricePlan setEffDate(String effDate) {
+        this.effDate = effDate;
+        return this;
+    }
+
+    public UpPricePlan setExpDate(String expDate) {
+        this.expDate = expDate;
+        return this;
+    }
+
+    public UpPricePlan setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+
+    public UpPricePlan setChecker(String checker) {
+        this.checker = checker;
+        return this;
+    }
+
+    public UpPricePlan setIslock(String islock) {
+        this.islock = islock;
+        return this;
+    }
+
+    public UpPricePlan setSupplierId(String supplierId) {
+        this.supplierId = supplierId;
+        return this;
+    }
+
+    public UpPricePlan setProviderType(String providerType) {
+        this.providerType = providerType;
+        return this;
+    }
+
+    public UpPricePlan setBusinessDomainId(String businessDomainId) {
+        this.businessDomainId = businessDomainId;
+        return this;
+    }
+
+    public UpPricePlan setOperRegion(String operRegion) {
+        this.operRegion = operRegion;
+        return this;
+    }
+
+    public UpPricePlan setShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
+
+    public UpPricePlan addFeature(UpItemFeature relatFeature) {
+        relatFeature.setProductItemId(productItemId);
+        relatFeatures.add(relatFeature);
+        return this;
+    }
+    // ---- Methods of UpProductItem End ----
 
     public UpPricePlan() {
         super(UpProductItem.ITEM_TYPE_PRICE_PLAN);
-        this.pricePlanId = super._getProductItemId();
+        this.pricePlanId = super.getProductItemId();
     }
 
     public UpPricePlan(String pricePlanId) {
@@ -43,8 +171,9 @@ public class UpPricePlan extends UpProductItem {
         return pricePlanId;
     }
 
-    private void setPricePlanId(String pricePlanId) {
+    private UpPricePlan setPricePlanId(String pricePlanId) {
         this.pricePlanId = pricePlanId;
+        return this;
     }
 
     public String getPricePlanTypeCd() {
@@ -54,40 +183,45 @@ public class UpPricePlan extends UpProductItem {
         return "'" + pricePlanTypeCd + "'";
     }
 
-    public void setPricePlanTypeCd(String pricePlanTypeCd) {
+    public UpPricePlan setPricePlanTypeCd(String pricePlanTypeCd) {
         this.pricePlanTypeCd = pricePlanTypeCd;
+        return this;
     }
 
     public String getFeeAmount() {
         return feeAmount;
     }
 
-    public void setFeeAmount(String feeAmount) {
+    public UpPricePlan setFeeAmount(String feeAmount) {
         this.feeAmount = feeAmount;
+        return this;
     }
 
     public String getBalanceCode() {
         return balanceCode;
     }
 
-    public void setBalanceCode(String balanceCode) {
+    public UpPricePlan setBalanceCode(String balanceCode) {
         this.balanceCode = balanceCode;
+        return this;
     }
 
     public String getSpecialPayment() {
         return specialPayment;
     }
 
-    public void setSpecialPayment(String specialPayment) {
+    public UpPricePlan setSpecialPayment(String specialPayment) {
         this.specialPayment = specialPayment;
+        return this;
     }
 
     public String getAccCode() {
         return accCode;
     }
 
-    public void setAccCode(String accCode) {
+    public UpPricePlan setAccCode(String accCode) {
         this.accCode = accCode;
+        return this;
     }
 
     public String getParaFlag() {
@@ -97,8 +231,9 @@ public class UpPricePlan extends UpProductItem {
         return "'" + paraFlag + "'";
     }
 
-    public void setParaFlag(String paraFlag) {
+    public UpPricePlan setParaFlag(String paraFlag) {
         this.paraFlag = paraFlag;
+        return this;
     }
 
     public String getInterfaceCode() {
@@ -108,51 +243,9 @@ public class UpPricePlan extends UpProductItem {
         return "'" + paraFlag + "'";
     }
 
-    public void setInterfaceCode(String interfaceCode) {
+    public UpPricePlan setInterfaceCode(String interfaceCode) {
         this.interfaceCode = interfaceCode;
-    }
-
-    public String getCreater() {
-        return creater;
-    }
-
-    public void setCreater(String creater) {
-        this.creater = creater;
-    }
-
-    public String getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(String createDate) {
-        this.createDate = createDate;
-    }
-
-    public String getModifier() {
-        return modifier;
-    }
-
-    public void setModifier(String modifier) {
-        this.modifier = modifier;
-    }
-
-    public String getModifyDate() {
-        return modifyDate;
-    }
-
-    public void setModifyDate(String modifyDate) {
-        this.modifyDate = modifyDate;
-    }
-
-    public String getDelFlag() {
-        if (delFlag.equals("null")) {
-            return delFlag;
-        }
-        return "'" + delFlag + "'";
-    }
-
-    public void setDelFlag(String delFlag) {
-        this.delFlag = delFlag;
+        return this;
     }
 
     public String toInsertSql() {

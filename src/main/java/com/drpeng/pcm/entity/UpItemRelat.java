@@ -52,7 +52,7 @@ public class UpItemRelat extends BaseEntity {
 
     public UpItemRelat(UpProductItem relatProductItem) {
         this.relatProductItem = relatProductItem;
-        relatProductItemId = this.relatProductItem._getProductItemId();
+        relatProductItemId = this.relatProductItem.getProductItemId();
         itemRelatId = String.valueOf(getNextItemRelatId());
     }
 
@@ -60,24 +60,27 @@ public class UpItemRelat extends BaseEntity {
         return itemRelatId;
     }
 
-    private void setItemRelatId(String itemRelatId) {
+    private UpItemRelat setItemRelatId(String itemRelatId) {
         this.itemRelatId = itemRelatId;
+        return this;
     }
 
     public String getProductItemId() {
         return productItemId;
     }
 
-    public void setProductItemId(String productItemId) {
+    public UpItemRelat setProductItemId(String productItemId) {
         this.productItemId = productItemId;
+        return this;
     }
 
     public String getRelatProductItemId() {
         return relatProductItemId;
     }
 
-    public void setRelatProductItemId(String relatProductItemId) {
+    public UpItemRelat setRelatProductItemId(String relatProductItemId) {
         this.relatProductItemId = relatProductItemId;
+        return this;
     }
 
     public String getProdItemRelatKindId() {
@@ -87,8 +90,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + prodItemRelatKindId + "'";
     }
 
-    public void setProdItemRelatKindId(String prodItemRelatKindId) {
+    public UpItemRelat setProdItemRelatKindId(String prodItemRelatKindId) {
         this.prodItemRelatKindId = prodItemRelatKindId;
+        return this;
     }
 
     public String getExtendAttrA() {
@@ -98,8 +102,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrA + "'";
     }
 
-    public void setExtendAttrA(String extendAttrA) {
+    public UpItemRelat setExtendAttrA(String extendAttrA) {
         this.extendAttrA = extendAttrA;
+        return this;
     }
 
     public String getExtendAttrB() {
@@ -109,8 +114,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrB + "'";
     }
 
-    public void setExtendAttrB(String extendAttrB) {
+    public UpItemRelat setExtendAttrB(String extendAttrB) {
         this.extendAttrB = extendAttrB;
+        return this;
     }
 
     public String getExtendAttrC() {
@@ -120,8 +126,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrC + "'";
     }
 
-    public void setExtendAttrC(String extendAttrC) {
+    public UpItemRelat setExtendAttrC(String extendAttrC) {
         this.extendAttrC = extendAttrC;
+        return this;
     }
 
     public String getExtendAttrD() {
@@ -131,8 +138,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrD + "'";
     }
 
-    public void setExtendAttrD(String extendAttrD) {
+    public UpItemRelat setExtendAttrD(String extendAttrD) {
         this.extendAttrD = extendAttrD;
+        return this;
     }
 
     public String getExtendAttrE() {
@@ -142,8 +150,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrE + "'";
     }
 
-    public void setExtendAttrE(String extendAttrE) {
+    public UpItemRelat setExtendAttrE(String extendAttrE) {
         this.extendAttrE = extendAttrE;
+        return this;
     }
 
     public String getExtendAttrF() {
@@ -153,8 +162,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrF + "'";
     }
 
-    public void setExtendAttrF(String extendAttrF) {
+    public UpItemRelat setExtendAttrF(String extendAttrF) {
         this.extendAttrF = extendAttrF;
+        return this;
     }
 
     public String getExtendAttrG() {
@@ -164,8 +174,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrG + "'";
     }
 
-    public void setExtendAttrG(String extendAttrG) {
+    public UpItemRelat setExtendAttrG(String extendAttrG) {
         this.extendAttrG = extendAttrG;
+        return this;
     }
 
     public String getExtendAttrH() {
@@ -175,8 +186,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrH + "'";
     }
 
-    public void setExtendAttrH(String extendAttrH) {
+    public UpItemRelat setExtendAttrH(String extendAttrH) {
         this.extendAttrH = extendAttrH;
+        return this;
     }
 
     public String getExtendAttrI() {
@@ -186,8 +198,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrI + "'";
     }
 
-    public void setExtendAttrI(String extendAttrI) {
+    public UpItemRelat setExtendAttrI(String extendAttrI) {
         this.extendAttrI = extendAttrI;
+        return this;
     }
 
     public String getExtendAttrJ() {
@@ -197,8 +210,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrJ + "'";
     }
 
-    public void setExtendAttrJ(String extendAttrJ) {
+    public UpItemRelat setExtendAttrJ(String extendAttrJ) {
         this.extendAttrJ = extendAttrJ;
+        return this;
     }
 
     public String getExtendAttrK() {
@@ -208,8 +222,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrK + "'";
     }
 
-    public void setExtendAttrK(String extendAttrK) {
+    public UpItemRelat setExtendAttrK(String extendAttrK) {
         this.extendAttrK = extendAttrK;
+        return this;
     }
 
     public String getExtendAttrL() {
@@ -219,8 +234,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrL + "'";
     }
 
-    public void setExtendAttrL(String extendAttrL) {
+    public UpItemRelat setExtendAttrL(String extendAttrL) {
         this.extendAttrL = extendAttrL;
+        return this;
     }
 
     public String getExtendAttrM() {
@@ -230,8 +246,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrM + "'";
     }
 
-    public void setExtendAttrM(String extendAttrM) {
+    public UpItemRelat setExtendAttrM(String extendAttrM) {
         this.extendAttrM = extendAttrM;
+        return this;
     }
 
     public String getExtendAttrN() {
@@ -241,8 +258,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrN + "'";
     }
 
-    public void setExtendAttrN(String extendAttrN) {
+    public UpItemRelat setExtendAttrN(String extendAttrN) {
         this.extendAttrN = extendAttrN;
+        return this;
     }
 
     public String getExtendAttrO() {
@@ -252,48 +270,54 @@ public class UpItemRelat extends BaseEntity {
         return "'" + extendAttrO + "'";
     }
 
-    public void setExtendAttrO(String extendAttrO) {
+    public UpItemRelat setExtendAttrO(String extendAttrO) {
         this.extendAttrO = extendAttrO;
+        return this;
     }
 
     public String getSortBy() {
         return sortBy;
     }
 
-    public void setSortBy(String sortBy) {
+    public UpItemRelat setSortBy(String sortBy) {
         this.sortBy = sortBy;
+        return this;
     }
 
     public String getCreater() {
         return creater;
     }
 
-    public void setCreater(String creater) {
+    public UpItemRelat setCreater(String creater) {
         this.creater = creater;
+        return this;
     }
 
     public String getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(String createDate) {
+    public UpItemRelat setCreateDate(String createDate) {
         this.createDate = createDate;
+        return this;
     }
 
     public String getModifier() {
         return modifier;
     }
 
-    public void setModifier(String modifier) {
+    public UpItemRelat setModifier(String modifier) {
         this.modifier = modifier;
+        return this;
     }
 
     public String getModifyDate() {
         return modifyDate;
     }
 
-    public void setModifyDate(String modifyDate) {
+    public UpItemRelat setModifyDate(String modifyDate) {
         this.modifyDate = modifyDate;
+        return this;
     }
 
     public String getDelFlag() {
@@ -303,8 +327,9 @@ public class UpItemRelat extends BaseEntity {
         return "'" + delFlag + "'";
     }
 
-    public void setDelFlag(String delFlag) {
+    public UpItemRelat setDelFlag(String delFlag) {
         this.delFlag = delFlag;
+        return this;
     }
 
     public String getApplyRegion() {
@@ -314,24 +339,27 @@ public class UpItemRelat extends BaseEntity {
         return "'" + applyRegion + "'";
     }
 
-    public void setApplyRegion(String applyRegion) {
+    public UpItemRelat setApplyRegion(String applyRegion) {
         this.applyRegion = applyRegion;
+        return this;
     }
 
     public String getPriority() {
         return priority;
     }
 
-    public void setPriority(String priority) {
+    public UpItemRelat setPriority(String priority) {
         this.priority = priority;
+        return this;
     }
 
     public String getTableName() {
         return tableName;
     }
 
-    protected void setTableName(String tableName) {
+    protected UpItemRelat setTableName(String tableName) {
         this.tableName = tableName;
+        return this;
     }
 
     public String toInsertSql() {

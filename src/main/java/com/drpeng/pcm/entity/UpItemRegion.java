@@ -34,16 +34,18 @@ public class UpItemRegion extends BaseEntity {
         return itemRegionId;
     }
 
-    private void setItemRegionId(String itemRegionId) {
+    private UpItemRegion setItemRegionId(String itemRegionId) {
         this.itemRegionId = itemRegionId;
+        return this;
     }
 
     public String getProductItemId() {
         return productItemId;
     }
 
-    public void setProductItemId(String productItemId) {
+    public UpItemRegion setProductItemId(String productItemId) {
         this.productItemId = productItemId;
+        return this;
     }
 
     public String getRegionId() {
@@ -53,8 +55,9 @@ public class UpItemRegion extends BaseEntity {
         return "'" + regionId + "'";
     }
 
-    public void setRegionId(String regionId) {
+    public UpItemRegion setRegionId(String regionId) {
         this.regionId = regionId;
+        return this;
     }
 
     public String getRelatRegionType() {
@@ -64,8 +67,9 @@ public class UpItemRegion extends BaseEntity {
         return "'" + relatRegionType + "'";
     }
 
-    public void setRelatRegionType(String relatRegionType) {
+    public UpItemRegion setRelatRegionType(String relatRegionType) {
         this.relatRegionType = relatRegionType;
+        return this;
     }
 
     public String getItemType() {
@@ -75,56 +79,63 @@ public class UpItemRegion extends BaseEntity {
         return "'" + itemType + "'";
     }
 
-    public void setItemType(String itemType) {
+    public UpItemRegion setItemType(String itemType) {
         this.itemType = itemType;
+        return this;
     }
 
     public String getEffDate() {
         return effDate;
     }
 
-    public void setEffDate(String effDate) {
+    public UpItemRegion setEffDate(String effDate) {
         this.effDate = effDate;
+        return this;
     }
 
     public String getExpDate() {
         return expDate;
     }
 
-    public void setExpDate(String expDate) {
+    public UpItemRegion setExpDate(String expDate) {
         this.expDate = expDate;
+        return this;
     }
 
     public String getCreater() {
         return creater;
     }
 
-    public void setCreater(String creater) {
+    public UpItemRegion setCreater(String creater) {
         this.creater = creater;
+        return this;
     }
 
     public String getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(String createDate) {
+    public UpItemRegion setCreateDate(String createDate) {
         this.createDate = createDate;
+        return this;
     }
 
     public String getModifier() {
         return modifier;
     }
 
-    public void setModifier(String modifier) {
+    public UpItemRegion setModifier(String modifier) {
         this.modifier = modifier;
+        return this;
     }
 
     public String getModifyDate() {
         return modifyDate;
     }
 
-    public void setModifyDate(String modifyDate) {
+    public UpItemRegion setModifyDate(String modifyDate) {
         this.modifyDate = modifyDate;
+        return this;
     }
 
     public String getDelFlag() {
@@ -134,8 +145,9 @@ public class UpItemRegion extends BaseEntity {
         return "'" + delFlag + "'";
     }
 
-    public void setDelFlag(String delFlag) {
+    public UpItemRegion setDelFlag(String delFlag) {
         this.delFlag = delFlag;
+        return this;
     }
 
     public String toInsertSql() {

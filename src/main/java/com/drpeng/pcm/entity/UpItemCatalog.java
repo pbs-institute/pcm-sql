@@ -31,24 +31,27 @@ public class UpItemCatalog extends BaseEntity {
         return relatId;
     }
 
-    private void setRelatId(String relatId) {
+    private UpItemCatalog setRelatId(String relatId) {
         this.relatId = relatId;
+        return this;
     }
 
     public String getCatalogId() {
         return catalogId;
     }
 
-    public void setCatalogId(String catalogId) {
+    public UpItemCatalog setCatalogId(String catalogId) {
         this.catalogId = catalogId;
+        return this;
     }
 
     public String getProductItemId() {
         return productItemId;
     }
 
-    public void setProductItemId(String productItemId) {
+    public UpItemCatalog setProductItemId(String productItemId) {
         this.productItemId = productItemId;
+        return this;
     }
 
     public String getProdItemRelatKindId() {
@@ -58,40 +61,45 @@ public class UpItemCatalog extends BaseEntity {
         return "'" + prodItemRelatKindId + "'";
     }
 
-    public void setProdItemRelatKindId(String prodItemRelatKindId) {
+    public UpItemCatalog setProdItemRelatKindId(String prodItemRelatKindId) {
         this.prodItemRelatKindId = prodItemRelatKindId;
+        return this;
     }
 
     public String getCreater() {
         return creater;
     }
 
-    public void setCreater(String creater) {
+    public UpItemCatalog setCreater(String creater) {
         this.creater = creater;
+        return this;
     }
 
     public String getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(String createDate) {
+    public UpItemCatalog setCreateDate(String createDate) {
         this.createDate = createDate;
+        return this;
     }
 
     public String getModifier() {
         return modifier;
     }
 
-    public void setModifier(String modifier) {
+    public UpItemCatalog setModifier(String modifier) {
         this.modifier = modifier;
+        return this;
     }
 
     public String getModifyDate() {
         return modifyDate;
     }
 
-    public void setModifyDate(String modifyDate) {
+    public UpItemCatalog setModifyDate(String modifyDate) {
         this.modifyDate = modifyDate;
+        return this;
     }
 
     public String getDelFlag() {
@@ -101,8 +109,9 @@ public class UpItemCatalog extends BaseEntity {
         return "'" + delFlag + "'";
     }
 
-    public void setDelFlag(String delFlag) {
+    public UpItemCatalog setDelFlag(String delFlag) {
         this.delFlag = delFlag;
+        return this;
     }
 
     public String toInsertSql() {

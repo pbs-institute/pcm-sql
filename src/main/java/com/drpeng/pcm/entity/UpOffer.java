@@ -26,23 +26,151 @@ public class UpOffer extends UpProductItem {
     private String isGlobal = "null";
     private String dailyEffect = "null";
     private String stopDispose = "null";
-    private String modifyDate = "null";
-    private String modifier = "null";
-    private String createDate = "sysdate";
-    private String creater = "10458";
-    private String delFlag = "1";
 
-    private List<UpPlanProdRel> relatProducts = new ArrayList<UpPlanProdRel>();
-    private List<UpPlanPlanRel> relatOfferPlans = new ArrayList<UpPlanPlanRel>();
+    private List<UpItemRelat> relatProducts = new ArrayList<UpItemRelat>();
+    private List<UpItemRelat> relatOfferPlans = new ArrayList<UpItemRelat>();
     private List<UpItemRelat> relatPricePlans = new ArrayList<UpItemRelat>();
     private List<UpItemRelat> relatBusinesses = new ArrayList<UpItemRelat>();
     private List<UpItemRelat> relatSpecRoles = new ArrayList<UpItemRelat>();
     private List<UpItemCatalog> relatCatalogs = new ArrayList<UpItemCatalog>();
     private List<UpItemRegion> relatRegions = new ArrayList<UpItemRegion>();
 
+    // ---- Methods of UpProductItem Begin ----
+    public UpOffer setExtendId(String extendId) {
+        this.extendId = extendId;
+        return this;
+    }
+
+    public UpOffer setCode(String code) {
+        this.code = code;
+        return this;
+    }
+
+    public UpOffer setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public UpOffer setAlphaName(String alphaName) {
+        this.alphaName = alphaName;
+        return this;
+    }
+
+    public UpOffer setItemType(String itemType) {
+        this.itemType = itemType;
+        return this;
+    }
+
+    public UpOffer setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+
+    public UpOffer setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+
+    public UpOffer setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+
+    public UpOffer setCreater(String creater) {
+        this.creater = creater;
+        return this;
+    }
+
+    public UpOffer setModifier(String modifier) {
+        this.modifier = modifier;
+        return this;
+    }
+
+    public UpOffer setState(String state) {
+        this.state = state;
+        return this;
+    }
+
+    public UpOffer setDelFlag(String delFlag) {
+        this.delFlag = delFlag;
+        return this;
+    }
+
+    public UpOffer setRemarks(String remarks) {
+        this.remarks = remarks;
+        return this;
+    }
+
+    public UpOffer setCreateDate(String createDate) {
+        this.createDate = createDate;
+        return this;
+    }
+
+    public UpOffer setModifyDate(String modifyDate) {
+        this.modifyDate = modifyDate;
+        return this;
+    }
+
+    public UpOffer setEffDate(String effDate) {
+        this.effDate = effDate;
+        return this;
+    }
+
+    public UpOffer setExpDate(String expDate) {
+        this.expDate = expDate;
+        return this;
+    }
+
+    public UpOffer setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+
+    public UpOffer setChecker(String checker) {
+        this.checker = checker;
+        return this;
+    }
+
+    public UpOffer setIslock(String islock) {
+        this.islock = islock;
+        return this;
+    }
+
+    public UpOffer setSupplierId(String supplierId) {
+        this.supplierId = supplierId;
+        return this;
+    }
+
+    public UpOffer setProviderType(String providerType) {
+        this.providerType = providerType;
+        return this;
+    }
+
+    public UpOffer setBusinessDomainId(String businessDomainId) {
+        this.businessDomainId = businessDomainId;
+        return this;
+    }
+
+    public UpOffer setOperRegion(String operRegion) {
+        this.operRegion = operRegion;
+        return this;
+    }
+
+    public UpOffer setShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
+
+    public UpOffer addFeature(UpItemFeature relatFeature) {
+        relatFeature.setProductItemId(productItemId);
+        relatFeatures.add(relatFeature);
+        return this;
+    }
+    // ---- Methods of UpProductItem End ----
+
     public UpOffer() {
         super(UpProductItem.ITEM_TYPE_OFFER_PLAN);
-        this.offerId = super._getProductItemId();
+        this.offerId = super.getProductItemId();
     }
 
     public UpOffer(String offerId) {
@@ -100,130 +228,105 @@ public class UpOffer extends UpProductItem {
         return stopDispose;
     }
 
-    public String getModifyDate() {
-        return modifyDate;
-    }
-
-    public String getModifier() {
-        return modifier;
-    }
-
-    public String getCreateDate() {
-        return createDate;
-    }
-
-    public String getCreater() {
-        return creater;
-    }
-
-    public String getDelFlag() {
-        if (delFlag.equals("null")) {
-            return delFlag;
-        }
-        return "'" + delFlag + "'";
-    }
-
-    private void setOfferId(String offerId) {
+    private UpOffer setOfferId(String offerId) {
         this.offerId = offerId;
+        return this;
     }
 
-    public void setOfferType(String offerType) {
+    public UpOffer setOfferType(String offerType) {
         this.offerType = offerType;
+        return this;
     }
 
-    public void setPayType(String payType) {
+    public UpOffer setPayType(String payType) {
         this.payType = payType;
+        return this;
     }
 
-    public void setTrademark(String trademark) {
+    public UpOffer setTrademark(String trademark) {
         this.trademark = trademark;
+        return this;
     }
 
-    public void setBusiType(String busiType) {
+    public UpOffer setBusiType(String busiType) {
         this.busiType = busiType;
+        return this;
     }
 
-    public void setOfferPlanType(String offerPlanType) {
+    public UpOffer setOfferPlanType(String offerPlanType) {
         this.offerPlanType = offerPlanType;
+        return this;
     }
 
-    public void setProdSpecId(String prodSpecId) {
+    public UpOffer setProdSpecId(String prodSpecId) {
         this.prodSpecId = prodSpecId;
+        return this;
     }
 
-    public void setPackedFlag(String packedFlag) {
+    public UpOffer setPackedFlag(String packedFlag) {
         this.packedFlag = packedFlag;
+        return this;
     }
 
-    public void setIsGlobal(String isGlobal) {
+    public UpOffer setIsGlobal(String isGlobal) {
         this.isGlobal = isGlobal;
+        return this;
     }
 
-    public void setDailyEffect(String dailyEffect) {
+    public UpOffer setDailyEffect(String dailyEffect) {
         this.dailyEffect = dailyEffect;
+        return this;
     }
 
-    public void setStopDispose(String stopDispose) {
+    public UpOffer setStopDispose(String stopDispose) {
         this.stopDispose = stopDispose;
+        return this;
     }
 
-    public void setModifyDate(String modifyDate) {
-        this.modifyDate = modifyDate;
-    }
-
-    public void setModifier(String modifier) {
-        this.modifier = modifier;
-    }
-
-    public void setCreateDate(String createDate) {
-        this.createDate = createDate;
-    }
-
-    public void setCreater(String creater) {
-        this.creater = creater;
-    }
-
-    public void setDelFlag(String delFlag) {
-        this.delFlag = delFlag;
-    }
-
-    public void addRelatProduct(UpPlanProdRel relatProduct) {
+    public UpOffer addRelatProduct(UpItemRelat relatProduct) {
         relatProduct.setProdItemRelatKindId(UpPlanProdRel.OFFER_PLAN_INCLUDE_SRVC_SINGLE);
         relatProduct.setProductItemId(offerId);
         relatProducts.add(relatProduct);
+        return this;
     }
 
-    public void addRelatOfferPlan(UpPlanPlanRel relatOfferPlan) {
+    public UpOffer addRelatOfferPlan(UpItemRelat relatOfferPlan) {
         relatOfferPlan.setProductItemId(offerId);
         relatOfferPlans.add(relatOfferPlan);
+        return this;
     }
 
-    public void addRelatPricePlan(UpItemRelat relatPricePlan) {
+    public UpOffer addRelatPricePlan(UpItemRelat relatPricePlan) {
         relatPricePlan.setProdItemRelatKindId(UpItemRelat.OFFER_PLAN_GENERAL_PRICE_PLAN_PKG_BUSI);
         relatPricePlan.setProductItemId(offerId);
         relatPricePlans.add(relatPricePlan);
+        return this;
     }
 
-    public void addRelatBusiness(UpItemRelat relatBusiness) {
+    public UpOffer addRelatBusiness(UpItemRelat relatBusiness) {
         relatBusiness.setProdItemRelatKindId(UpItemRelat.OFFER_PLAN_GENERAL_BUSINESS);
         relatBusiness.setProductItemId(offerId);
         relatBusinesses.add(relatBusiness);
+        return this;
     }
 
-    public void addRelatSpecRole(UpItemRelat relatSpecRole) {
+    public UpOffer addRelatSpecRole(UpItemRelat relatSpecRole) {
         relatSpecRole.setProdItemRelatKindId(UpItemRelat.OFFER_PLAN_GENERAL_SPEC_ROLE);
         relatSpecRole.setProductItemId(offerId);
         relatSpecRoles.add(relatSpecRole);
+        return this;
     }
 
-    public void addRelatCatalog(UpItemCatalog relatCatalog) {
+    public UpOffer addRelatCatalog(UpItemCatalog relatCatalog) {
         relatCatalog.setProductItemId(offerId);
         relatCatalogs.add(relatCatalog);
+        return this;
     }
 
-    public void addRelatRegion(UpItemRegion relatRegion) {
+    public UpOffer addRelatRegion(UpItemRegion relatRegion) {
         relatRegion.setProductItemId(offerId);
         relatRegions.add(relatRegion);
+        return this;
     }
 
     public String toInsertSql() {
@@ -269,7 +372,7 @@ public class UpOffer extends UpProductItem {
             ;
         }
 
-        for (UpPlanProdRel relatProduct : relatProducts) {
+        for (UpItemRelat relatProduct : relatProducts) {
             sqlBuf.append(relatProduct.toInsertSql());
         }
 
@@ -285,7 +388,7 @@ public class UpOffer extends UpProductItem {
             sqlBuf.append(relatPricePlan.toInsertSql());
         }
 
-        for (UpPlanPlanRel relatOfferPlan : relatOfferPlans) {
+        for (UpItemRelat relatOfferPlan : relatOfferPlans) {
             sqlBuf.append(relatOfferPlan.toInsertSql());
         }
 

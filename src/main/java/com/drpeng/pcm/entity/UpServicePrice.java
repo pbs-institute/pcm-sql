@@ -18,17 +18,145 @@ public class UpServicePrice extends UpProductItem {
     private String subParam = "null";
     private String packedFlag = "null";
     private String multiFlag = "null";
-    private String creater = "10458";
-    private String createDate = "sysdate";
-    private String modifier = "null";
-    private String modifyDate = "null";
-    private String delFlag = "1";
+
+    // ---- Methods of UpProductItem Begin ----
+    public UpServicePrice setExtendId(String extendId) {
+        this.extendId = extendId;
+        return this;
+    }
+
+    public UpServicePrice setCode(String code) {
+        this.code = code;
+        return this;
+    }
+
+    public UpServicePrice setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public UpServicePrice setAlphaName(String alphaName) {
+        this.alphaName = alphaName;
+        return this;
+    }
+
+    public UpServicePrice setItemType(String itemType) {
+        this.itemType = itemType;
+        return this;
+    }
+
+    public UpServicePrice setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+
+    public UpServicePrice setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+
+    public UpServicePrice setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+
+    public UpServicePrice setCreater(String creater) {
+        this.creater = creater;
+        return this;
+    }
+
+    public UpServicePrice setModifier(String modifier) {
+        this.modifier = modifier;
+        return this;
+    }
+
+    public UpServicePrice setState(String state) {
+        this.state = state;
+        return this;
+    }
+
+    public UpServicePrice setDelFlag(String delFlag) {
+        this.delFlag = delFlag;
+        return this;
+    }
+
+    public UpServicePrice setRemarks(String remarks) {
+        this.remarks = remarks;
+        return this;
+    }
+
+    public UpServicePrice setCreateDate(String createDate) {
+        this.createDate = createDate;
+        return this;
+    }
+
+    public UpServicePrice setModifyDate(String modifyDate) {
+        this.modifyDate = modifyDate;
+        return this;
+    }
+
+    public UpServicePrice setEffDate(String effDate) {
+        this.effDate = effDate;
+        return this;
+    }
+
+    public UpServicePrice setExpDate(String expDate) {
+        this.expDate = expDate;
+        return this;
+    }
+
+    public UpServicePrice setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+
+    public UpServicePrice setChecker(String checker) {
+        this.checker = checker;
+        return this;
+    }
+
+    public UpServicePrice setIslock(String islock) {
+        this.islock = islock;
+        return this;
+    }
+
+    public UpServicePrice setSupplierId(String supplierId) {
+        this.supplierId = supplierId;
+        return this;
+    }
+
+    public UpServicePrice setProviderType(String providerType) {
+        this.providerType = providerType;
+        return this;
+    }
+
+    public UpServicePrice setBusinessDomainId(String businessDomainId) {
+        this.businessDomainId = businessDomainId;
+        return this;
+    }
+
+    public UpServicePrice setOperRegion(String operRegion) {
+        this.operRegion = operRegion;
+        return this;
+    }
+
+    public UpServicePrice setShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
+
+    public UpServicePrice addFeature(UpItemFeature relatFeature) {
+        relatFeature.setProductItemId(productItemId);
+        relatFeatures.add(relatFeature);
+        return this;
+    }
+    // ---- Methods of UpProductItem End ----
 
     private List<UpItemRelat> relatServices = new ArrayList<UpItemRelat>();
 
     public UpServicePrice() {
         super(UpProductItem.ITEM_TYPE_SRVC_SINGLE);
-        this.servicePriceId = super._getProductItemId();
+        this.servicePriceId = super.getProductItemId();
     }
 
     public UpServicePrice(String servicePriceId) {
@@ -40,8 +168,9 @@ public class UpServicePrice extends UpProductItem {
         return servicePriceId;
     }
 
-    private void setServicePriceId(String servicePriceId) {
+    private UpServicePrice setServicePriceId(String servicePriceId) {
         this.servicePriceId = servicePriceId;
+        return this;
     }
 
     public String getServicePriceKind() {
@@ -51,16 +180,18 @@ public class UpServicePrice extends UpProductItem {
         return "'" + servicePriceKind + "'";
     }
 
-    public void setServicePriceKind(String servicePriceKind) {
+    public UpServicePrice setServicePriceKind(String servicePriceKind) {
         this.servicePriceKind = servicePriceKind;
+        return this;
     }
 
     public String getIsMain() {
         return isMain;
     }
 
-    public void setIsMain(String isMain) {
+    public UpServicePrice setIsMain(String isMain) {
         this.isMain = isMain;
+        return this;
     }
 
     public String getSubCond() {
@@ -70,8 +201,9 @@ public class UpServicePrice extends UpProductItem {
         return "'" + subCond + "'";
     }
 
-    public void setSubCond(String subCond) {
+    public UpServicePrice setSubCond(String subCond) {
         this.subCond = subCond;
+        return this;
     }
 
     public String getSubParam() {
@@ -81,16 +213,18 @@ public class UpServicePrice extends UpProductItem {
         return "'" + subParam + "'";
     }
 
-    public void setSubParam(String subParam) {
+    public UpServicePrice setSubParam(String subParam) {
         this.subParam = subParam;
+        return this;
     }
 
     public String getPackedFlag() {
         return packedFlag;
     }
 
-    public void setPackedFlag(String packedFlag) {
+    public UpServicePrice setPackedFlag(String packedFlag) {
         this.packedFlag = packedFlag;
+        return this;
     }
 
     public String getMultiFlag() {
@@ -100,57 +234,16 @@ public class UpServicePrice extends UpProductItem {
         return "'" + multiFlag + "'";
     }
 
-    public void setMultiFlag(String multiFlag) {
+    public UpServicePrice setMultiFlag(String multiFlag) {
         this.multiFlag = multiFlag;
+        return this;
     }
 
-    public String getCreater() {
-        return creater;
-    }
-
-    public void setCreater(String creater) {
-        this.creater = creater;
-    }
-
-    public String getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(String createDate) {
-        this.createDate = createDate;
-    }
-
-    public String getModifier() {
-        return modifier;
-    }
-
-    public void setModifier(String modifier) {
-        this.modifier = modifier;
-    }
-
-    public String getModifyDate() {
-        return modifyDate;
-    }
-
-    public void setModifyDate(String modifyDate) {
-        this.modifyDate = modifyDate;
-    }
-
-    public String getDelFlag() {
-        if (delFlag.equals("null")) {
-            return delFlag;
-        }
-        return "'" + delFlag + "'";
-    }
-
-    public void setDelFlag(String delFlag) {
-        this.delFlag = delFlag;
-    }
-
-    public void addRelatService(UpItemRelat relatService) {
+    public UpServicePrice addRelatService(UpItemRelat relatService) {
         relatService.setProdItemRelatKindId(UpItemRelat.SRVC_SINGLE_PRICE_SERVICE);
         relatService.setProductItemId(servicePriceId);
         relatServices.add(relatService);
+        return this;
     }
 
     public String toInsertSql() {
